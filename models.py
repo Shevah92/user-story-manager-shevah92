@@ -15,6 +15,7 @@ class BaseModel(Model):  # Main Class with the database connection.
 
 class UserStories(BaseModel):
     story_title = CharField()
+    user_story = CharField()
     acceptance = CharField()
     business_value = IntegerField()
     estimation = CharField()
