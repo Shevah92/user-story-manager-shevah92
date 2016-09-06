@@ -13,10 +13,11 @@ class BaseModel(Model):  # Main Class with the database connection.
     class Meta:
         database = db
 
+
 class UserStories(BaseModel):
     story_title = CharField()
     user_story = CharField()
     acceptance = CharField()
-    business_value = IntegerField()
-    estimation = CharField()
+    business_value = FloatField()
+    estimation = FloatField()
     status = CharField()
