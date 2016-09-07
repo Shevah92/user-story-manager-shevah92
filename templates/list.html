@@ -11,11 +11,12 @@
         </style>
     <body>
         <form action="http://localhost:5000/story">
-            <input type="submit" value="Create New Userstory"/>
+            <input type="submit" value="Add New Userstory"/>
         </form>
     <p>
         <table width="100%">
             <tr>
+                <td>ID</td>
                 <td>Story Title</td>
                 <td>User Story</td>
                 <td>Acceptance Criteria</td>
@@ -27,6 +28,7 @@
             </tr>
             {% for story in stories %}
             <tr>
+                <td>{{story.id}}</td>
                 <td>{{story.story_title}}</td>
                 <td>{{story.user_story}}</td>
                 <td>{{story.acceptance}}</td>

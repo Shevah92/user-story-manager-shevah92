@@ -16,7 +16,7 @@ def render_index():
 @app.route("/story/<story_id>", methods=["GET"])
 def render_edit(story_id):
     data = UserStories.get(UserStories.id == story_id)
-    return render_template("story.html", data = data)
+    return render_template("story.html", data = data, function = "Edit")
 
 
 @app.route("/story/<story_id>", methods=["POST"])
@@ -34,7 +34,7 @@ def update_story(story_id):
 @app.route("/story", methods=["GET"])
 def render_story():
     data = []
-    return render_template("story.html", data = data)
+    return render_template("story.html", data = data, function = "Add New")
 
 
 @app.route("/story", methods=["POST"])
