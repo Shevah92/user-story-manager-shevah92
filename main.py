@@ -37,7 +37,7 @@ def render_story():
     return render_template("story.html", data = data, function = "Add New")
 
 
-@app.route("/story", methods=["POST"])
+@app.route("/story/", methods=["POST"])
 def get_data():
     UserStories.create(story_title=request.form["story_title"],
                        user_story=request.form["user_story"],
