@@ -1,10 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sprint Reporter</title>
+    </head>
+    <style>
+		table, th, td {
+			border: 1px solid black;
+		}
+        </style>
+    <body>
+        <form action="http://localhost:5000/story">
+            <input type="submit" value="Create New Userstory"/>
+        </form>
+    <p>
+        <table width="100%">
+            <tr>
+                <td>Story Title</td>
+                <td>User Story</td>
+                <td>Acceptance Criteria</td>
+                <td>Business Value</td>
+                <td>Estimation (h)</td>
+                <td>Status</td>
+                <td>Edit</td>
+                <td>Delete</td>
+            </tr>
+            {% for story in stories %}
+            <tr>
+                <td>{{story.story_title}}</td>
+                <td>{{story.user_story}}</td>
+                <td>{{story.acceptance}}</td>
+                <td>{{story.business_value}}</td>
+                <td>{{story.estimation}}</td>
+                <td>{{story.status}}</td>
+                <td>
+                    <form action="http://localhost:5000/story">
+                        <input type="submit" value="Edit">
+                    </form>
+                </td>
+                <td>
+                     <form action="{{delete}}{{story.id}}">
+                        <input type="submit" value="Delete">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </p>
+    </body>
 </html>
