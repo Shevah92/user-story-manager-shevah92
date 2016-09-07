@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 
-
+<html>
     <head>
-        <meta charset="UTF-8">
         <title>User Story Manager  - Add new Story</title>
     </head>
     <body>
@@ -15,9 +14,9 @@
                 <h3>Acceptance Criteria</h3>
                     <textarea id="acceptance" name="acceptance" rows="8" cols="150"></textarea>
                 <h3>Business Value</h3>
-                    <input id="business_value" type="number" value="100" min="100" max="1500" step="100"/>
+                    <input name="business_value" type="number" value="100" min="100" max="1500" step="100"/>
                 <h3>Estimation (h)</h3>
-                    <input id="estimation" type="number" value="0.5" min="0.5" max="40" step="0.5"/>
+                    <input name="estimation" type="number" value="0.5" min="0.5" max="40" step="0.5"/>
                 <h3>Status</h3>
                     <Select name="status">
                         <option value="planning">Planning</option>
@@ -26,7 +25,7 @@
                         <option value="review">Review</option>
                         <option value="done">Done</option>
                     </Select>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit"/>
         </form>
 
     </body>
