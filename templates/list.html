@@ -34,7 +34,7 @@
                 <td>{{story.estimation}}</td>
                 <td>{{story.status}}</td>
                 <td>
-                    <form action="http://localhost:5000/story">
+                    <form action="{{edit}}{{story.id}}">
                         <input type="submit" value="Edit">
                     </form>
                 </td>

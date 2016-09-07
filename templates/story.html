@@ -5,20 +5,20 @@
         <title>User Story Manager  - Add new Story</title>
     </head>
     <body>
-        <form action="/story" method ="post">
+        <form action="/story/{{data.id}}" method ="post">
             <h1>User Story Manager  - Add new Story</h1>
                 <h3>Story Title</h3>
-                    <textarea  id="story_title" name="story_title" rows="1" cols="150"></textarea>
+                    <textarea  id="story_title" name="story_title" rows="1" cols="150">{{data.story_title}}</textarea>
                 <h3>User Story</h3>
-                    <textarea id="user_story" name="user_story" rows="5" cols="150"></textarea>
+                    <textarea id="user_story" name="user_story" rows="5" cols="150">{{data.user_story}}</textarea>
                 <h3>Acceptance Criteria</h3>
-                    <textarea id="acceptance" name="acceptance" rows="8" cols="150"></textarea>
+                    <textarea id="acceptance" name="acceptance" rows="8" cols="150">{{data.acceptance}}</textarea>
                 <h3>Business Value</h3>
-                    <input name="business_value" type="number" value="100" min="100" max="1500" step="100"/>
+                    <input name="business_value" type="number" value="{{data.business_value}}" min="100" max="1500" step="100"/>
                 <h3>Estimation (h)</h3>
-                    <input name="estimation" type="number" value="0.5" min="0.5" max="40" step="0.5"/>
+                    <input name="estimation" type="number" value="{{data.estimation}}" min="0.5" max="40" step="0.5"/>
                 <h3>Status</h3>
-                    <Select name="status">
+                    <Select name="status" value="{{data.status}}">
                         <option value="planning">Planning</option>
                         <option value="to do">To Do</option>
                         <option value="in progress">In Progress</option>
